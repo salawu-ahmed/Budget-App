@@ -4,7 +4,7 @@ export const AppContext = createContext();
 
 const initialState = {
   budget: 9540,
-  expenseItem: [
+  expenseItems: [
     {
       id: 2223,
       name: "Shopping",
@@ -20,16 +20,16 @@ const initialState = {
       name: "Transportation",
       cost: 400,
     },
-    {
-      id: 2226,
-      name: "Fuel",
-      cost: 70,
-    },
-    {
-        id: 2227,
-        name: "Child Care",
-        cost: 40,
-    },
+    // {
+    //   id: 2226,
+    //   name: "Fuel",
+    //   cost: 70,
+    // },
+    // {
+    //     id: 2227,
+    //     name: "Child Care",
+    //     cost: 40,
+    // },
 ],
 };
 const AppReducer = (initialState, action) => {
@@ -47,7 +47,7 @@ export const AppProvider = (props) => {
     <AppContext.Provider
       value={{
         budget: state.budget,
-        expenses: state.expenses,
+        expenseItems: state.expenseItems,
         dispatch,
       }}
     >
